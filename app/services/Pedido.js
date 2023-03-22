@@ -1,37 +1,50 @@
-const  modelPedido= require('../models/pedido');
-
+const modelPedido = require('../models/pedido');
 
 module.exports = class pedido {
-//funcionando criar produto
+    //rota para criar pedido
     async create(body) {
-        const pedido = await modelPedido.create(body);
-        return pedido;
+        try {
+            const pedido = await modelPedido.create(body);
+            return pedido;
+        } catch (error) {
+            throw error;
+        }
     }
-//funcionando deletar por id
+//rota de deletar pedido
     async deleteOne(_idPedido) {
-        const pedido = await modelPedido.deleteOne({_id: _idPedido});
-        return pedido;
+        try {
+            const pedido = await modelPedido.deleteOne({_id: _idPedido});
+            return pedido;
+        } catch (error) {
+            throw error;
+        }
     }
-//funciona update por id
+//rota para atualizar pedido
     async updateOne(_idPedido, body) {
-        const pedido = await modelPedido.updateOne({_id: _idPedido}, {$set: body});
-        return pedido;
+        try {
+            const pedido = await modelPedido.updateOne({_id: _idPedido}, {$set: body});
+            return pedido;
+        } catch (error) {
+            throw error;
+        }
     }
-//funciona listar todos pedido
+//rota para listar todos pedidos
     async find() {
-        const pedidos = await modelPedido.find().populate({path:'produto' ,select: 'produto tamanho quantidade  -_id'}).populate({ path: 'dadoscliente', select: 'nome email  telefone cpf  CEP  cidade  bairro rua numero complemento  -_id'}).exec(); 
-        return pedidos;
+        try {
+            const pedidos = await modelPedido.find().populate({path:'produto' ,select: 'produto tamanho quantidade  -_id'}).populate({ path: 'dadoscliente', select: 'nome email  telefone cpf  CEP  cidade  bairro rua numero complemento  -_id'}).exec(); 
+            return pedidos;
+        } catch (error) {
+            throw error;
+        }
     }
+//rota para listar  pedido por id
 
-
-//funcionando listar pedidos
     async findOne(_idPedido) {
-        const pedidos = await modelPedido.findOne({_id: _idPedido}).populate({path:'produto' ,select: 'produto tamanho quantidade  -_id'}).populate({ path: 'dadoscliente', select: 'nome email  telefone cpf  CEP  cidade  bairro rua numero complemento  -_id'}).exec(); 
-        return pedidos;
+        try {
+            const pedidos = await modelPedido.findOne({_id: _idPedido}).populate({path:'produto' ,select: 'produto tamanho quantidade  -_id'}).populate({ path: 'dadoscliente', select: 'nome email  telefone cpf  CEP  cidade  bairro rua numero complemento  -_id'}).exec(); 
+            return pedidos;
+        } catch (error) {
+            throw error;
+        }
     }
-
-
-    
-
-
 };
