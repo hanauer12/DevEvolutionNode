@@ -3,7 +3,6 @@
 Esta é uma API que oferece rotas CRUD para pedidos, produtos e dados de clientes. A documentação da API pode ser encontrada neste link:  
 -    [ Documentação da API ](https://documenter.getpostman.com/view/26487953/2s93RKzwAF)
 
-Dentro da pasta **/api** existem arquivos para exportar todas as rotas para [ Postman ](https://www.postman.com/) e [ Insomnia ](https://insomnia.rest/download).
 
 ##  Pré-requisitos
 Antes de usar a API, é necessário ter as seguintes ferramentas instaladas:
