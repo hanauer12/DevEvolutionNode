@@ -20,4 +20,12 @@ Após clonar o repositório navegue até a pasta /app e já com o pm2 instalado 
 
 A API estará disponível em http://localhost:3000
 
+##  Iniciar  repositório apartir de imagem Docker
+Necessario ter o docker instalado
 
+docker pull renatohanauer/apiprodutosepedidos
+
+Para iniciar o projeto
+docker run --rm -it -d -p 4000:3000 apiprodutosepedidos
+
+A API estará disponível em http://localhost:3000
