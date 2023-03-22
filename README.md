@@ -8,6 +8,7 @@ Esta é uma API que oferece rotas CRUD para pedidos, produtos e dados de cliente
 Antes de usar a API, é necessário ter as seguintes ferramentas instaladas:
 
 Node.js v18.14.2
+
 PM2
 
 ##  Clone do repositório
